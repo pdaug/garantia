@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Garantia de Serviço</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Garantia de Serviço</h1>
+
+      <form action="#" method="post">
+        <table>
+          <tr>
+            <th colspan="2">Informações do Cliente</th>
+          </tr>
+          <tr>
+            <td>Nome do Cliente:</td>
+            <td><input type="text" name="nome_cliente" required /></td>
+          </tr>
+          <tr>
+            <td>Endereço (Rua):</td>
+            <td><input type="text" name="endereco_rua" required /></td>
+          </tr>
+          <tr>
+            <td>Número:</td>
+            <td><input type="text" name="endereco_numero" required /></td>
+          </tr>
+          <tr>
+            <td>Bairro:</td>
+            <td><input type="text" name="bairro" required /></td>
+          </tr>
+          <tr>
+            <td>Cidade:</td>
+            <td><input type="text" name="cidade" required /></td>
+          </tr>
+          <tr>
+            <td>CPF:</td>
+            <td><input type="text" name="cpf" required /></td>
+          </tr>
+
+          <tr>
+            <th colspan="2">Informações do Serviço</th>
+          </tr>
+          <tr>
+            <td>Tipo de Trabalho / Descrição:</td>
+            <td><textarea name="descricao" rows="4" required></textarea></td>
+          </tr>
+          <tr>
+            <td>Tempo da Garantia:</td>
+            <td>
+              <input
+                type="text"
+                name="tempo_garantia"
+                placeholder="Ex: 6 meses"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Data de Vencimento da Garantia:</td>
+            <td><input type="date" name="data_vencimento" required /></td>
+          </tr>
+          <tr>
+            <td>Valor do Serviço (R$):</td>
+            <td>
+              <input type="number" name="valor_servico" step="0.01" required />
+            </td>
+          </tr>
+        </table>
+
+        <br />
+        <button type="submit">Salvar</button>
+      </form>
+    </div>
+  </body>
+</html>

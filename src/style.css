@@ -1,0 +1,14 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+td,
+th {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+input,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
