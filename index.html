@@ -7,78 +7,114 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     />
     <link rel="stylesheet" href="src/style.css" />
+    <link rel="shortcut icon" href="src/favicon.png" type="image/x-icon" />
   </head>
   <body>
     <div class="container">
       <h1>Garantia de Serviço</h1>
 
       <form action="#" method="post">
-        <table>
-          <tr>
-            <th colspan="2">Informações do Cliente</th>
-          </tr>
-          <tr>
-            <td>Nome do Cliente:</td>
-            <td><input type="text" name="nome_cliente" required /></td>
-          </tr>
-          <tr>
-            <td>Endereço (Rua):</td>
-            <td><input type="text" name="endereco_rua" required /></td>
-          </tr>
-          <tr>
-            <td>Número:</td>
-            <td><input type="text" name="endereco_numero" required /></td>
-          </tr>
-          <tr>
-            <td>Bairro:</td>
-            <td><input type="text" name="bairro" required /></td>
-          </tr>
-          <tr>
-            <td>Cidade:</td>
-            <td><input type="text" name="cidade" required /></td>
-          </tr>
-          <tr>
-            <td>CPF:</td>
-            <td><input type="text" name="cpf" required /></td>
-          </tr>
+        <div class="form-section">
+          <h2>Informações do Cliente</h2>
 
-          <tr>
-            <th colspan="2">Informações do Serviço</th>
-          </tr>
-          <tr>
-            <td>Tipo de Trabalho / Descrição:</td>
-            <td><textarea name="descricao" rows="4" required></textarea></td>
-          </tr>
-          <tr>
-            <td>Tempo da Garantia:</td>
-            <td>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome_cliente">Nome:</label>
               <input
                 type="text"
-                name="tempo_garantia"
-                placeholder="Ex: 6 meses"
+                id="nome_cliente"
+                name="nome_cliente"
                 required
               />
-            </td>
-          </tr>
-          <tr>
-            <td>Data de Vencimento da Garantia:</td>
-            <td><input type="date" name="data_vencimento" required /></td>
-          </tr>
-          <tr>
-            <td>Valor do Serviço (R$):</td>
-            <td>
-              <input type="number" name="valor_servico" step="0.01" required />
-            </td>
-          </tr>
-        </table>
+            </div>
+            <div class="form-group">
+              <label for="cpf">CPF/CNPJ:</label>
+              <input type="text" id="cpf" name="cpf" required />
+            </div>
+          </div>
 
-        <br />
+          <div class="form-group">
+            <label for="endereco_rua">Endereço (Rua):</label>
+            <input type="text" id="endereco_rua" name="endereco_rua" required />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="endereco_numero">Número:</label>
+              <input
+                type="text"
+                id="endereco_numero"
+                name="endereco_numero"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="bairro">Bairro:</label>
+              <input type="text" id="bairro" name="bairro" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" required />
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>Informações do Serviço</h2>
+
+          <div class="form-group">
+            <label for="descricao">Descrição:</label>
+            <textarea
+              id="descricao"
+              name="descricao"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="data_servico">Data do Servico:</label>
+            <input
+              type="date"
+              id="data_vencimento"
+              name="data_vencimento"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="tempo_garantia">Tempo da Garantia:</label>
+            <input
+              type="text"
+              id="tempo_garantia"
+              name="tempo_garantia"
+              placeholder="Ex: 6 meses"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="valor_servico">Valor do Serviço (R$):</label>
+            <input
+              type="number"
+              id="valor_servico"
+              name="valor_servico"
+              step="0.01"
+              required
+            />
+          </div>
+        </div>
+
         <button type="submit">Salvar</button>
       </form>
     </div>
+
+    <script src="src/script.js"></script>
   </body>
 </html>
